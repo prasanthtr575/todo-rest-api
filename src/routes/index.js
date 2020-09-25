@@ -1,10 +1,11 @@
 import express from 'express';
-import { testEnvironmentVariable } from '../settings';
+import { handlePostReq, handleGetReq, handleUpdateReq, handleDeleteReq } from '../controllers';
 
 const indexRouter = express.Router();
 
-indexRouter.get('/', (req, res) => res
-  .status(200)
-  .json({ message: `Todo REST APIs | ${testEnvironmentVariable}` }));
+indexRouter.post('/', handlePostReq);
+indexRouter.get('/', handleGetReq);
+indexRouter.put('/', handleUpdateReq);
+indexRouter.delete('/', handleDeleteReq);
 
 export default indexRouter;
