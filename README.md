@@ -5,5 +5,5 @@ Todo REST API
 [![Coverage Status](https://coveralls.io/repos/github/prasanthtr575/express-api-template/badge.svg?branch=master)](https://coveralls.io/github/prasanthtr575/express-api-template?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/287cf9bb32f06c68632e/maintainability)](https://codeclimate.com/github/prasanthtr575/todo-rest-api/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/287cf9bb32f06c68632e/test_coverage)](https://codeclimate.com/github/prasanthtr575/todo-rest-api/test_coverage)
-[![Build status](https://ci.appveyor.com/api/projects/status/7j9tjxpln71w32y9?svg=true)](https://ci.appveyor.com/project/prasanthtr575/todo-rest-api)
+#[![Build status](https://ci.appveyor.com/api/projects/status/7j9tjxpln71w32y9?svg=true)](https://ci.appveyor.com/project/prasanthtr575/todo-rest-api)
 
