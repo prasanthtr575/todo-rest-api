@@ -1,11 +1,9 @@
 import express from 'express';
-import { handlePostReq, handleGetReq, handleUpdateReq, handleDeleteReq } from '../controllers';
+import { indexPage, getTodos } from '../controllers';
 
 const indexRouter = express.Router();
 
-indexRouter.post('/', handlePostReq);
-indexRouter.get('/', handleGetReq);
-indexRouter.put('/', handleUpdateReq);
-indexRouter.delete('/', handleDeleteReq);
+indexRouter.get('/', indexPage);
+indexRouter.get('/todo', getTodos);
 
 export default indexRouter;

@@ -1,6 +1,12 @@
-import { testEnvironmentVariable } from '../settings';
+import Model from '../models/model';
 
-export const handlePostReq = (req, res) => res.status(200).json({ message: `POST | ${testEnvironmentVariable}` });
-export const handleGetReq = (req, res) => res.status(200).json({ message: `GET | ${testEnvironmentVariable}` });
-export const handleUpdateReq = (req, res) => res.status(200).json({ message: `PUT | ${testEnvironmentVariable}` });
-export const handleDeleteReq = (req, res) => res.status(200).json({ message: `DELETE | ${testEnvironmentVariable}` });
+const todoModel = new Model('todos');
+
+export const getTodos = async (req, res) => {
+    try {
+        const data = await todoModel.select(['todo_subject', 'todo_description']);
+        res.status(200).json({todos: data.rows});
+    } catch(err) {
+        res.status(200).json({ message: err.stack })
+    }
+};
